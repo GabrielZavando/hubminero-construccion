@@ -1,0 +1,40 @@
+// Variables
+
+
+@mixin titulo($font-color){
+  color: $font-color;
+  font-size:var(--font-size-titulo);
+  padding: var(--padding-titulo);
+  letter-spacing: $espacio-entre-letras;
+  font-weight: 400;
+}
+
+@mixin sub-titulo($font-color){
+  color: $font-color;
+  font-size: var(--font-size-subtitulo);
+  letter-spacing: $espacio-entre-letras;
+  font-weight: 400;
+}
+
+// Los titulos son para los h1
+.Titulo{
+  @include titulo(white);
+}
+
+#swal2-title{
+  @include titulo(#090A07);
+  font-weight: 300;
+  letter-spacing: $espacio-entre-letras;
+}
+
+.swal2-content{
+  color: color(secondary) !important;
+}
+
+.swal2-actions button.swal2-confirm.swal2-styled{
+  background: color(fondo) !important;
+}
+
+.Subtitulo{
+  @include sub-titulo(white);
+}

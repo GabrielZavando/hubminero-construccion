@@ -1,0 +1,98 @@
+// Variables
+.Box-form{
+  --ancho-input: 60%;
+  --ancho-button: 40%;
+  @include mq(smH){
+    --ancho-input: 70%;
+    --ancho-button: 30%;
+  }
+  @include mq(sm){
+    --ancho-input: 65%;
+    --ancho-button: 35%;
+  }
+  @include mq(mdl){
+    --ancho-input: 75%;
+    --ancho-button: 25%;
+  }
+}
+
+// Mixins
+
+@mixin box-form{
+  // border: 1px solid blue;
+  margin: var(--margin-form) auto;
+  & form{
+    width: 95%;
+    margin: auto;
+    display: flex; //solo en este formulario
+    @include mq(smH){
+      max-width: 400px;
+    }
+    @include mq(md){
+      max-width: 500px;;
+    }
+    & input{
+      width: var(--ancho-input);
+      line-height: 1.5;
+      padding-left: 1rem;
+      border: transparent;
+      font-weight: 400;
+      font-size: .9rem;
+      background-color: white;
+      color: color(shark);
+      letter-spacing: $espacio-entre-letras;
+      // border-radius: 1.5rem 0 0 1.5rem;
+      outline: none;
+      &:focus{
+        border: 1px solid color(success);
+      }
+      &:active{
+        border: 1px solid color(success);
+      }
+    }
+    & button[type="submit"]{
+      @include boton-ovalado(color(success));
+      width: var(--ancho-button);
+      position: relative;
+      border-radius: 0;
+      text-align: right;
+      letter-spacing: $espacio-entre-letras;
+      font-weight: 400;
+      padding: .5rem 1rem .5rem .5rem;
+      @include mq(lgm){
+        padding-right: 1.5rem;
+      }
+      & i{
+        position: absolute;
+        top: 25%;
+        right: 70%;
+        // font-size: 1rem;
+        transform: rotate(20deg);
+        @include mq(sm){
+          top: 25%;
+        }
+        @include mq(smH){
+          top: 22%;
+          font-size: 1.2rem;
+          right: 65%;
+        }
+        @include mq(md){
+          font-size: 1.4rem;
+          right: 70%;
+        }
+        @include mq(lgm){
+          top: 22%;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.Box-form{
+  @include box-form();
+}
+
+// .Box-form-search{
+//   @include box-form;
+// }

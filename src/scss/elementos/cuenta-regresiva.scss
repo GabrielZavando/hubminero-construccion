@@ -1,0 +1,30 @@
+.Contador{
+  width: 100%;
+  // border: 1px solid red;
+  & .Contador-content{
+    width: 98%;
+    max-width: 700px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    // padding: 1rem;
+    grid-gap: var(--gap);
+    &-item{
+      padding: var(--padding-item-clock);
+      text-align: center;
+      @include mq(md){
+        border: 2px solid white;
+      }
+      &-number{
+        color: white;
+        font-size: var(--font-size-number);
+      }
+      &-text{
+        color: white;
+        font-size: var(--font-size-text);
+      }
+    }
+  }
+}

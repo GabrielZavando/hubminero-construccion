@@ -1,0 +1,10 @@
+.Footer{
+  margin-top: var(--margin-footer);
+  @include mq(sm){
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // border: 2px solid red;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin parrafo($familia, $color){
+  font-family: $familia;
+  font-size: var(--font-size-parrafo);
+  color: $color;
+  padding: .5rem;
+}
+
+.Parrafo{
+  @include parrafo($fuente-secundaria, color(secondary));
+  font-size: var(--font-size-parrafo);
+  letter-spacing: 1px;
+}

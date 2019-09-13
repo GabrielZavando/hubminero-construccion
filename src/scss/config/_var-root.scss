@@ -1,0 +1,81 @@
+// Variables para maquetación
+
+$ancho-maximo: 1400px; //de todo el sitio
+
+$espacio-entre-letras: 2px;
+
+:root{
+  --gap: 0; //gap del contador content
+  --font-size-parrafo: 1.2rem;
+  --font-size-titulo: 1.7rem;
+  --font-size-subtitulo: 1.4rem;
+  --font-size-number: 1.5rem;
+  --font-size-text: 1rem;
+  --padding-titulo: 1rem 0;
+  --margin-footer: 2rem;
+  --small-text: .9rem;
+  --width-logo: 40%;
+  --margin-form: 1.5rem;
+  --main-maximo: 95%;
+  --size-icon: 1.7rem;
+  --padding-icon: 1.5rem;
+  --margen-box-icon: 0 auto 1rem;
+  --padding-item-clock: 0;
+  @include mq(smH){
+    --width-logo: 25%;
+    --size-icon: 2.3rem;
+  }
+  @include mq(sm){
+    --margen-box-icon: 2.8rem auto;
+    --margin-footer: 18%;
+    --size-icon: 2.3rem;
+    --padding-titulo: 1.5rem 0;
+  }
+  @include mq(smm){
+    --size-icon: 2.5rem;
+    --padding-titulo: 2rem 0;
+    --margen-box-icon: 8vh auto;
+    // --margin-footer: 27vh;
+    --margin-form: 3rem;
+    --font-size-number: 1.7rem;
+    --font-size-text: 1.2rem;
+    --width-logo: 25%;
+  }
+  @include mq(md){
+    --font-size-parrafos: 1rem;
+    --font-size-titulo: 1.9rem;
+    --small-text: 1rem;
+    --size-icon: 3rem;
+    --gap: .5rem;
+    --padding-item-clock: 1rem;
+    --font-size-subtitulo: 1.6rem;
+    --font-size-parrafo: 1.4rem;
+    --font-size-number: 1.7rem;
+    --font-size-text: 1.3rem;
+  }
+  @include mq(mdl){
+    --margin-form: 4rem;
+    // --margin-footer: 15vh;
+    // --margen-box-icon: 15vh auto;
+    --padding-titulo: 3rem 0;
+    --font-size-titulo: 2rem;
+    --font-size-subtitulo: 1.7rem;
+    --font-size-parrafo: 1.5rem;
+    --font-size-number: 1.8rem;
+  }
+  @include mq(lgs){
+    --gap: 1rem;
+    --main-maximo: 90%;
+    --size-icon: 2.2rem;
+    // --margin-footer: 30vh;
+  }
+  @include mq(lgm){
+    --padding-titulo: 0;
+    --width-logo: 30%;
+    --margen-box-icon: 2.5rem auto;
+    --margin-form: 2rem;
+    --margin-footer: 5.8rem;
+    --small-text: 1rem;
+    --size-icon: 2.7rem;
+  }
+}

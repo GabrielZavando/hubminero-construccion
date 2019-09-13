@@ -1,0 +1,21 @@
+// Variables
+
+.Box-icon-link{
+  --grid: repeat(2, 1fr);
+}
+
+// Mixin
+
+@mixin box-icon($grid){
+  display: grid;
+  grid-template-columns: $grid;
+  justify-items: center; //horizontal
+  align-items: center; //vertical
+  width: 50%;
+  max-width: 300px;
+}
+
+.Box-icon-link{
+  @include box-icon(var(--grid));
+  margin: var(--margen-box-icon);
+}

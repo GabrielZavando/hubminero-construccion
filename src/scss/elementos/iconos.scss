@@ -1,0 +1,9 @@
+.Icon-link{
+  color: color(secondary);
+  font-size: var(--size-icon);
+  padding: var(--padding-icon);
+  transition: color .3s ease;
+  &:hover{
+    color: darken(color(secondary), 9);
+  }
+}

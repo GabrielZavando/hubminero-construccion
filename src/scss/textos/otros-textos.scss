@@ -1,0 +1,18 @@
+// Acá van a ir los textos pequeños, citas u otros
+
+
+.Small-text{
+  color: white;
+  font-size: var(--small-text);
+  font-family: $fuente-secundaria;
+  padding: .2rem 0;
+}
+
+.Text-link{
+  color: color(secondary);
+  transition: color .3s ease;
+  font-size: var(--small-text);
+  &:hover{
+    color: darken(color(secondary), 5);
+  }
+}
